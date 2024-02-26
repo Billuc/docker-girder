@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "girder-plugin"
+version = "0.1.0"
+description = "Test plugin"
+authors = ["Luc Billaud"]
+license = "Apache Software License 2.0"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+]
+keywords = ["girder-plugin"]
+include = ["*", "!tests"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+girder = "^3.0.0a1"
+
+[tool.poetry.plugins."girder.plugin"]
+"plugin" = "girder_plugin:Plugin"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
