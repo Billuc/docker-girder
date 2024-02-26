@@ -6,7 +6,7 @@ ENV GIRDER_CONFIG /app/girder/config/girder.cfg
 COPY girder.dev.cfg ${GIRDER_CONFIG}
 
 COPY plugin /app/girder/plugin
-RUN pip install -e ./plugin --config-settings editable_mode=compat
+RUN pip install -e ./plugin
 
 RUN girder build
 

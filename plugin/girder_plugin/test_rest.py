@@ -23,5 +23,5 @@ class TestRest(Resource):
     def test_route(self, params):
         return {
             "status": 200,
-            "message": f"Hello, {params['name']}, I love youuuuu !"
+            "message": f"Hello, {params['name']} !"
         }
